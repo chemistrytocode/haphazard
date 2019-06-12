@@ -2,7 +2,7 @@ import React from 'react'
 import { Dropdown } from 'semantic-ui-react'
 
 const chemicalSearch = [
-  { key: 'af', value: 'af', flag: 'af', text: 'Sulphuric Acid' },
+  { text: 'Sulphuric Acid' },
   { key: 'ax', value: 'ax', flag: 'ax', text: 'Hydrochloric Acid' },
   { key: 'al', value: 'al', flag: 'al', text: 'Nitric Acid' },
   { key: 'dz', value: 'dz', flag: 'dz', text: 'Barium Chloride' },
@@ -15,15 +15,16 @@ const chemicalSearch = [
   { key: 'am', value: 'am', flag: 'am', text: 'Methanol' }
 ]
 
-const ChemicalSearch = () => (
+const ChemicalSearch = (props) => (
     <div class="field">
-  <Dropdown
-    placeholder='Select Chemical'
-    fluid
-    search
-    selection
-    options={chemicalSearch}
-  />
+    <label>{props.label}</label>
+    <Dropdown
+        placeholder={`Select ${props.label}`}
+        fluid
+        search
+        selection
+        options={chemicalSearch}
+    />
     </div>
 )
 

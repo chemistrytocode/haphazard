@@ -1,11 +1,11 @@
 import React from 'react'
 
-import InputTextQuestion from '../InputQuestion/InputTextQuestion'
-import InputNumberQuestion from '../InputQuestion/InputNumberQuestion'
+import NumberQuestion from '../Questions/Number'
 
 import ThreeFields from '../Layout/ThreeFields';
 
 import ChemicalSearch from './ChemicalSearch'
+import HazardSearch from './HazardSearch'
 
 const InputChemical = (props) => {
     return (
@@ -13,10 +13,10 @@ const InputChemical = (props) => {
         <ChemicalSearch
             label={props.chemical} 
         />
-        <InputNumberQuestion
+        <NumberQuestion
             label={props.quantity} 
         />
-        <InputTextQuestion
+        <HazardSearch
             label={props.hazard} 
         />
     </ThreeFields>

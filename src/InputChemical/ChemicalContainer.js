@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import InputChemical from '../InputChemical/InputChemical';
+import InputChemical from './InputChemical';
 
 class ChemicalContainer extends Component {
     constructor() {
@@ -17,9 +17,9 @@ class ChemicalContainer extends Component {
             children: [
                 ...this.state.children,
                 <InputChemical
-                    chemical={`Chemical-${this.state.counter}`}
-                    quantity={`Quantity-${this.state.counter}`}
-                    hazard={`Hazard-${this.state.counter}`}
+                    chemical={`Chemical #${this.state.counter}`}
+                    quantity={`Quantity #${this.state.counter}`}
+                    hazard={`Hazard #${this.state.counter}`}
                 />
             ],
             counter: this.state.counter + 1
@@ -41,12 +41,13 @@ class ChemicalContainer extends Component {
     render() {
         return(
             <div>
+                <h1 class="ui header" align="center">Chemical Entry</h1>
             <button onClick={this.addChemical}>Add Chemical</button>
             <button onClick={this.removeChemical}>Remove Chemical</button>
                 <InputChemical
-                    chemical="Chemical-1"
-                    quantity="Quantity-1"
-                    hazard="Hazard-1" />
+                    chemical="Chemical #1"
+                    quantity="Quantity #1"
+                    hazard="Hazard #1" />
                 {this.state.children}
             </div>
         )
