@@ -10,7 +10,7 @@ import UploadFile from './Questions/FileUpload';
 // import InputChemical from './InputChemical/InputChemical'
 // import ChemicalSearch from './InputChemical/ChemicalSearch'
 
-import ThreeFields from './Layout/ThreeFields'
+import FormWidth from './Layout/FormWidth'
 
 import FormContainer from './FormContainer/FormContainer'
 import ChemicalContainer from './InputChemical/ChemicalContainer';
@@ -20,41 +20,51 @@ import ChemicalContainer from './InputChemical/ChemicalContainer';
 // Collection Imports
 import periods from './Collections/periods';
 import rooms from './Collections/rooms';
+import { TextArea } from 'semantic-ui-react';
 
 
 const App = () => {
     return (
     <FormContainer>
-        <ThreeFields>
+        <h1 align="center">Practical Order</h1>
+        <FormWidth>
             <TextQuestion
                 label="Teacher" 
+                placeholder="Enter Teacher Initials"
             />
             <TextQuestion
                 label="Form" 
+                placeholder="Enter Form Group"
             />
-            <MultipleDropdown 
-                label="Period"
-                collection={periods}
-            />
-        </ThreeFields>
-        <ThreeFields>
             <SingleDropdown 
                 label="Room"
+                placeholder="Select a Room"
                 collection={rooms}
             />
+        </FormWidth>
+        <FormWidth>
+            <MultipleDropdown 
+                    label="Period"
+                    placeholder="Select Period(s)"
+                    collection={periods}
+            />
             <TextQuestion
-                label="Description" 
+                label="Practical Description" 
+                placeholder="Enter Description"
+
             />
             <UploadFile
-                label="File Upload"
+                label="UploadFile" 
             />
-        </ThreeFields>
-        <ChemicalContainer />
+        </FormWidth>
+            <ChemicalContainer />
+            <TextArea
+                label="Apparatus"
+                placeholder="Enter any Apparatus you require"
+            />
 
 
 
-
-    
      </FormContainer>
     )
 }

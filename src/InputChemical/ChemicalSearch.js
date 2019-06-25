@@ -1,31 +1,32 @@
 import React from 'react'
-import { Dropdown } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
+
 
 const chemicalSearch = [
-  { text: 'Sulphuric Acid' },
-  { key: 'ax', value: 'ax', flag: 'ax', text: 'Hydrochloric Acid' },
-  { key: 'al', value: 'al', flag: 'al', text: 'Nitric Acid' },
-  { key: 'dz', value: 'dz', flag: 'dz', text: 'Barium Chloride' },
-  { key: 'as', value: 'as', flag: 'as', text: 'Lithium Chloride' },
-  { key: 'ad', value: 'ad', flag: 'ad', text: 'Sodium Chloride' },
-  { key: 'ao', value: 'ao', flag: 'ao', text: 'Strontium Chloride' },
-  { key: 'ai', value: 'ai', flag: 'ai', text: 'Lead Nitrate' },
-  { key: 'ag', value: 'ag', flag: 'ag', text: 'Ethanol' },
-  { key: 'ar', value: 'ar', flag: 'ar', text: 'Propanol' },
-  { key: 'am', value: 'am', flag: 'am', text: 'Methanol' }
+  { key: '0', value: 'Hydrochloric Acid', text: 'Hydrochloric Acid', icon: 'loading flask' },
+  { key: '1', value: 'Sulphuric Acid', text: 'Sulphuric Acid', icon: 'loading flask' },
+  { key: '2', value: 'Nitric Acid', text: 'Nitric Acid', icon: 'loading flask' },
+  { key: '4', value: 'Barium Chloride', text: 'Barium Chloride', icon: 'loading cubes' },
+  { key: '5', value: 'Lithium Chloride', text: 'Lithium Chloride', icon: 'loading cubes' },
+  { key: '6', value: 'Sodium Chloride', text: 'Sodium Chloride', icon: 'loading cubes' },
+  { key: '7', value: 'Strontium Chloride', text: 'Strontium Chloride', icon: 'loading cubes' },
+  { key: '8', value: 'Lead Nitrate', text: 'Lead Nitrate', icon: 'loading cubes' },
+  { key: '9', value: 'Ethanol', text: 'Ethanol', icon: 'loading flask' },
+  { key: '10', value: 'Propanol', text: 'Propanol', icon: 'loading flask' },
+  { key: '11', value: 'Methanol', text: 'Methanol', icon: 'loading flask' }
 ]
 
+
 const ChemicalSearch = (props) => (
-    <div class="field">
-    <label>{props.label}</label>
-    <Dropdown
+
+  <Form.Select
         placeholder={`Select ${props.label}`}
+        label={props.label}
         fluid
         search
         selection
         options={chemicalSearch}
     />
-    </div>
-)
+  )
 
 export default ChemicalSearch

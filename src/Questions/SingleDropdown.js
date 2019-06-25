@@ -1,26 +1,25 @@
 import React from 'react'
-import { Dropdown } from 'semantic-ui-react';
+import { Form } from 'semantic-ui-react';
 
-    const SingleDropdown = (props) => {
+import './Questions.css';
 
-        // const collection = props.collection.map((x) => {return(<option value={x}>{x}</option>)});
+const SingleDropdown = (props) => {
 
-        const collection = props.collection.map((option, index) => ({
-            key: option[index],
-            text: option,
-            value: option,
-        }))
+    const collection = props.collection.map((option, index) => ({
+        key: option[index],
+        text: option,
+        value: option,
+    }))
 
-          
-        return (
-        <div class="field">
-            <label>{props.label}</label>
-            <Dropdown
-                placeholder='Select Room'
-                fluid
-                selection
-                options={collection} />
-        </div>)
+    return (
+        <Form.Select
+            label={props.label}
+            placeholder={props.placeholder}
+            clearable
+            fluid
+            selection
+            options={collection} />
+    );
 }
 
 export default SingleDropdown

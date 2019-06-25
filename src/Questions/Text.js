@@ -1,10 +1,14 @@
 import React from 'react'
+import { Form } from 'semantic-ui-react'
 
 const Text = (props) => {
-    return (<div class="field">
-        <label>{props.label}</label>
-        <input type="text" name={props.label} placeholder={props.label} />
-    </div>)
+    return (
+        <Form.Input
+            label={props.label}
+            placeholder={props.placeholder}
+            fluid
+       />
+    )
 }
 
 export default Text

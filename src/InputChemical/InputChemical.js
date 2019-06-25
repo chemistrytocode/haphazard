@@ -2,7 +2,7 @@ import React from 'react'
 
 import NumberQuestion from '../Questions/Number'
 
-import ThreeFields from '../Layout/ThreeFields';
+import ThreeFields from '../Layout/TwoFields';
 
 import ChemicalSearch from './ChemicalSearch'
 import HazardSearch from './HazardSearch'

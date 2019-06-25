@@ -1,5 +1,5 @@
 import React from 'react'
-import { Dropdown } from 'semantic-ui-react'
+import { Form } from 'semantic-ui-react'
 
 const hazardSearch = 
 [
@@ -15,15 +15,13 @@ const hazardSearch =
 ]
 
 const HazardSearch = (props) => (
-    <div class="field">
-    <label>{props.label}</label>
-    <Dropdown
+    <Form.Select
         placeholder={`Select ${props.label}`}
+        label={props.label}
         search
         selection
         options={hazardSearch}
     />
-    </div>
 )
 
 export default HazardSearch
