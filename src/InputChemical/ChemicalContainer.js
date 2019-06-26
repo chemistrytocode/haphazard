@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'semantic-ui-react';
 import InputChemical from './InputChemical';
 
 class ChemicalContainer extends Component {
@@ -19,7 +20,6 @@ class ChemicalContainer extends Component {
                 <InputChemical
                     chemical={`Chemical #${this.state.counter}`}
                     quantity={`Quantity #${this.state.counter}`}
-                    hazard={`Hazard #${this.state.counter}`}
                 />
             ],
             counter: this.state.counter + 1
@@ -42,12 +42,23 @@ class ChemicalContainer extends Component {
         return(
             <div>
                 <h1 class="ui header" align="center">Chemical Entry</h1>
-            <button onClick={this.addChemical}>Add Chemical</button>
-            <button onClick={this.removeChemical}>Remove Chemical</button>
+                <div align="center">
+                <Button.Group>
+                    <Button onClick={this.addChemical} positive>Add Chemical</Button>
+                    <Button.Or text='OR' />
+                    <Button onClick={this.removeChemical} negative>Remove Chemical</Button>
+                </Button.Group>
+                </div>
                 <InputChemical
                     chemical="Chemical #1"
+                    chemicalLabel="Chemical"
                     quantity="Quantity #1"
-                    hazard="Hazard #1" />
+                    quantityLabel="Quantity"
+                    hazard="Hazard #1"
+                    hazardLabelOne="Hazard #1"
+                    hazardLabelTwo="Hazard #2"
+                    hazardLabelThree="Hazard #3"
+                />
                 {this.state.children}
             </div>
         )

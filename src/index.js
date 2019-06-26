@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import TextQuestion from './Questions/Text'
+import TextAreaQuestion from './Questions/TextArea'
 // import NumberQuestion from './Questions/Number'
 import SingleDropdown from './Questions/SingleDropdown'
 import MultipleDropdown from './Questions/MultipleDropdown'
@@ -20,7 +21,7 @@ import ChemicalContainer from './InputChemical/ChemicalContainer';
 // Collection Imports
 import periods from './Collections/periods';
 import rooms from './Collections/rooms';
-import { TextArea } from 'semantic-ui-react';
+// import { TextArea } from 'semantic-ui-react';
 
 
 const App = () => {
@@ -57,12 +58,13 @@ const App = () => {
                 label="UploadFile" 
             />
         </FormWidth>
-            <ChemicalContainer />
-            <TextArea
+        <TextAreaQuestion
                 label="Apparatus"
                 placeholder="Enter any Apparatus you require"
             />
+        <ChemicalContainer />
 
+     
 
 
      </FormContainer>

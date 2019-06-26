@@ -1,14 +1,14 @@
 import React from 'react'
-import { Form } from 'semantic-ui-react';
+import { Form, TextArea } from 'semantic-ui-react';
 
-const TextArea = (props) => {
+const TextAreaQuestion = (props) => {
     return (
-    <Form.Input
-        control={TextArea}
-        label={props.label}
-        placeholder={props.placeholder}
-    />
+        <Form.Field 
+            control={TextArea} 
+            label='Apparatus' 
+            placeholder='Enter apparatus you need...'
+            style={{ minHeight: 120 }} />
     )
 }
 
-export default TextArea
+export default TextAreaQuestion

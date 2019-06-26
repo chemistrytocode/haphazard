@@ -1,26 +1,50 @@
 import React from 'react'
 
-import NumberQuestion from '../Questions/Number'
+import TextQuestion from '../Questions/Text'
 
-import ThreeFields from '../Layout/TwoFields';
+// import ThreeFields from '../Layout/TwoFields';
 
 import ChemicalSearch from './ChemicalSearch'
 import HazardSearch from './HazardSearch'
+import FormWidth from '../Layout/FormWidth';
 
 const InputChemical = (props) => {
     return (
-    <ThreeFields>
+    <FormWidth>
         <ChemicalSearch
-            label={props.chemical} 
+            label={props.chemicalLabel}
+            placeholder={props.chemical}
         />
-        <NumberQuestion
-            label={props.quantity} 
+        <TextQuestion
+            label={props.quantityLabel}
+            placeholder={props.quantity} 
         />
-        <HazardSearch
-            label={props.hazard} 
-        />
-    </ThreeFields>
+        <FormWidth>
+            <HazardSearch
+                label={props.hazardLabelOne} 
+                placeholder="#1"
+            />
+            <HazardSearch
+                label={props.hazardLabelTwo} 
+                placeholder="#2"
+            />
+            <HazardSearch
+                label={props.hazardLabelThree}
+                placeholder="#3"
+            />
+        </FormWidth>
+
+    </FormWidth>
     )
 }
 
 export default InputChemical
+
+// chemical="Chemical #1"
+// chemicalLabel="Chemical"
+// quantity="Quantity #1"
+// quantityLabel="Quantity"
+// hazard="Hazard #1"
+// hazardLabelOne="Hazard #1"
+// hazardLabelTwo="Hazard #2"
+// hazardLabelThree="Hazard #3"

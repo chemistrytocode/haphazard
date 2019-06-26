@@ -20,8 +20,9 @@ const chemicalSearch = [
 const ChemicalSearch = (props) => (
 
   <Form.Select
-        placeholder={`Select ${props.label}`}
+        placeholder={props.placeholder}
         label={props.label}
+        clearable
         fluid
         search
         selection
