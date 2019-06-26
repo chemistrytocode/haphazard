@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
+
 import InputChemical from './InputChemical';
 
 class ChemicalContainer extends Component {

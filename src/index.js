@@ -8,20 +8,12 @@ import SingleDropdown from './Questions/SingleDropdown'
 import MultipleDropdown from './Questions/MultipleDropdown'
 import UploadFile from './Questions/FileUpload';
 
-// import InputChemical from './InputChemical/InputChemical'
-// import ChemicalSearch from './InputChemical/ChemicalSearch'
-
 import FormWidth from './Layout/FormWidth'
-
 import FormContainer from './FormContainer/FormContainer'
 import ChemicalContainer from './InputChemical/ChemicalContainer';
 
-
-
-// Collection Imports
 import periods from './Collections/periods';
 import rooms from './Collections/rooms';
-// import { TextArea } from 'semantic-ui-react';
 
 
 const App = () => {

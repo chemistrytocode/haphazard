@@ -33,18 +33,8 @@ const InputChemical = (props) => {
                 placeholder="#3"
             />
         </FormWidth>
-
     </FormWidth>
     )
 }
 
 export default InputChemical
-
-// chemical="Chemical #1"
-// chemicalLabel="Chemical"
-// quantity="Quantity #1"
-// quantityLabel="Quantity"
-// hazard="Hazard #1"
-// hazardLabelOne="Hazard #1"
-// hazardLabelTwo="Hazard #2"
-// hazardLabelThree="Hazard #3"
